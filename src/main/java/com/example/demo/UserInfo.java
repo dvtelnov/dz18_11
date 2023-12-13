@@ -1,14 +1,13 @@
 package com.example.demo;
-public class User {
+
+public class UserInfo {
     private int age;
     private String username;
-    private String password;
     private String id;
 
-    public User(String name, String password, String id, int age) {
+    public UserInfo(String username, String id, int age) {
         this.age = age;
-        this.username = name;
-        this.password = password;
+        this.username = username;
         this.id=id;
     }
 
@@ -28,14 +27,6 @@ public class User {
         this.username = name;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public String getId() {
         return id;
     }
@@ -44,4 +35,3 @@ public class User {
         this.id = id;
     }
 }
-
