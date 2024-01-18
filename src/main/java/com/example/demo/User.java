@@ -1,15 +1,30 @@
 package com.example.demo;
-public class User {
-    private int age;
-    private String username;
-    private String password;
-    private String id;
 
-    public User(String name, String password, String id, int age) {
+import javax.persistence.*;
+
+@Entity
+@Table(name = "users")
+
+
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    @Column(name = "username")
+    private String username;
+    @Column(name = "password")
+    private String password;
+    @Column(name = "age")
+    private int age;
+
+    public User(String name, String password, int age) {
         this.age = age;
         this.username = name;
         this.password = password;
-        this.id=id;
+    }
+
+    public User() {
+
     }
 
     public int getAge() {
@@ -36,11 +51,11 @@ public class User {
         this.password = password;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 }
