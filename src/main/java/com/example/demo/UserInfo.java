@@ -3,9 +3,9 @@ package com.example.demo;
 public class UserInfo {
     private int age;
     private String username;
-    private String id;
+    private long id;
 
-    public UserInfo(String username, String id, int age) {
+    public UserInfo(String username, long id, int age) {
         this.age = age;
         this.username = username;
         this.id=id;
@@ -27,11 +27,11 @@ public class UserInfo {
         this.username = name;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 }
